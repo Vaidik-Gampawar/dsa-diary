@@ -98,7 +98,7 @@ This repo contains **topic-wise problems**, **optimized solutions**, and **expla
 ```
 | Topic                           | Status                   | Start Date | End Date |
 | ------------------------------- | ------------------------ | ---------- | -------- |
-| Basic of Programming - Level 1  | ⏳ Pending / ✔️ Completed |            |          |
+| Basic of Programming - Level 1  | ✔️ Completed              | 24/11/25   | 29/11/25 |
 | Basic of Programming - Level 2  | ⏳ Pending / ✔️ Completed |            |          |
 | Arrays, Time & Space Complexity | ⏳ Pending / ✔️ Completed |            |          |
 | Complete C++ STL                | ⏳ Pending / ✔️ Completed |            |          |
