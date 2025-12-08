@@ -1,79 +1,126 @@
-📌 Time & Space Complexity — DSA Notes
+## 📈 Time & Space Complexity — Notes
 
-Understanding time and space complexity is essential for estimating the performance of algorithms and writing optimal code. It tells how efficient an algorithm is in terms of execution time and memory usage.
+### ⏳ **What is Time Complexity?**
 
-🕒 Time Complexity
+Time complexity tells us **how the running time of an algorithm increases** with the **size of the input (n)**.
+It helps compare algorithms based on **efficiency** rather than machine speed or language.
 
-Time complexity represents how the running time of an algorithm grows with input size n.
+---
 
-Common Time Complexities (Best → Worst)
-Complexity	Name	Example
-O(1)	Constant	Accessing array element, Hash lookup
-O(log n)	Logarithmic	Binary Search
-O(n)	Linear	Traversing an array
-O(n log n)	Log-linear	Merge Sort, Quick Sort avg case
-O(n²)	Quadratic	Nested loops (Bubble Sort, Selection Sort)
-O(n³)	Cubic	3 nested loops
-O(2ⁿ)	Exponential	Fibonacci (recursive)
-O(n!)	Factorial	Permutation/Travelling Salesman
-🧠 How to Identify Time Complexity
+### 📌 **Common Time Complexities**
 
-Single loop → O(n)
+| Time Complexity | Name         | Example                                   |
+| --------------- | ------------ | ----------------------------------------- |
+| **O(1)**        | Constant     | Accessing array element, pushing to stack |
+| **O(log n)**    | Logarithmic  | Binary Search                             |
+| **O(n)**        | Linear       | Traversing an array / loop                |
+| **O(n log n)**  | Linearithmic | Merge Sort, Quick Sort average            |
+| **O(n²)**       | Quadratic    | Nested loops, Bubble Sort, Insertion Sort |
+| **O(2ⁿ)**       | Exponential  | Recursion with 2 calls (Fibonacci)        |
+| **O(n!)**       | Factorial    | Permutations / Backtracking (N-Queens)    |
 
-Nested loops → Multiply → O(n²), O(n³)
+---
 
-Binary search / divide-and-conquer → O(log n) or O(n log n)
+### 🧠 **Big-O Notation Rules**
 
-Ignoring constants and small terms
+| Rule                   | Meaning                                  |
+| ---------------------- | ---------------------------------------- |
+| **Drop constants**     | `O(2n) → O(n)`                           |
+| **Drop lower terms**   | `O(n² + n) → O(n²)`                      |
+| **Worst case matters** | Big-O represents worst performance       |
+| **Focus on growth**    | Operation count increases as input grows |
 
-O(2n + 3) = O(n)
-O(n² + n) = O(n²)
+Example:
 
-💾 Space Complexity
-
-Space complexity represents how much extra memory an algorithm uses.
-
-Components of Space
-Type	Description
-Input Space	Memory used to store input
-Auxiliary Space	Extra temporary memory used
-Total Space = Input + Auxiliary	
-Common Space Complexities
-Complexity	Description
-O(1)	Constant space (no extra storage)
-O(n)	Linear space (using arrays, vectors)
-O(n²)	2D matrix, DP table
-⚔ Time vs Space Trade-off
-
-Sometimes we choose between speed and memory:
-
-Faster algorithm uses more space (DP vs Recursion)
-
-Less memory may run slower (Brute force)
-
-✨ Examples
-Example 1
-for(int i=0; i<n; i++){
-    cout << i;
+```cpp
+for(int i=0; i<n; i++){         // O(n)
+   for(int j=0; j<n; j++){       // O(n)
+      cout << "*";              // O(1)
+   }
 }
+```
 
+Total = `O(n * n)` = **O(n²)**
 
-🔹 Time → O(n)
-🔹 Space → O(1)
+---
 
-Example 2
-for(int i=0; i<n; i++){
-    for(int j=0; j<n; j++){
-        cout << i << " " << j;
-    }
+## 💾 Space Complexity
+
+### 📌 **What is Space Complexity?**
+
+Space complexity measures **how much extra memory an algorithm uses** with respect to input size.
+
+| Space Complexity | Example                                               |
+| ---------------- | ----------------------------------------------------- |
+| **O(1)**         | Variables, pointers, constant memory                  |
+| **O(n)**         | Arrays, vectors, recursion depth for linear recursion |
+| **O(n²)**        | 2D matrix, DP table                                   |
+
+---
+
+### 🧮 Examples
+
+#### Example 1: Linear space
+
+```cpp
+int arr[n];   // uses O(n) extra space
+```
+
+#### Example 2: Recursion space
+
+```cpp
+int fact(int n){
+    if(n==0) return 1;
+    return n * fact(n-1);
 }
+```
 
+Depth = n → **O(n) space**
 
-🔹 Time → O(n²)
-🔹 Space → O(1)
+---
 
-Example 3
-int arr[n];
+## 🥊 Time vs Space Trade-off
 
+Many problems balance between:
 
-🔹 Space → O(n) because array takes n memory units
+| More Time      | Less Space                        |
+| -------------- | --------------------------------- |
+| More loops     | No extra memory                   |
+| Faster runtime | Extra memory such as hash map, DP |
+
+---
+
+## 🎯 Why Complexity Matters?
+
+* Optimizes code for **competitive programming & interviews**
+* Helps **select the best algorithm**
+* Crucial for **scalable system design**
+* Required by **FAANG level interviews**
+
+---
+
+## 🔥 Quick Complexity Cheat Sheet
+
+```
+Best  → O(1)
+Good  → O(log n)
+Medium → O(n)
+Slow → O(n log n)
+Bad → O(n²)
+Worst → O(2ⁿ), O(n!)
+```
+
+---
+
+## ✨ Conclusion
+
+Time & Space complexity helps us:
+
+* Write **efficient algorithms**
+* **Predict performance**
+* Perform better in **DSA & interviews**
+
+```
+Optimization is not about writing complex code,
+it's about writing code that runs efficiently.
+```
