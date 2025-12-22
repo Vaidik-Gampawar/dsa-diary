@@ -100,8 +100,8 @@ This repo contains **topic-wise problems**, **optimized solutions**, and **expla
 | ------------------------------- | ------------------------ | ---------- | -------- |
 | Basic of Programming - Level 1  | ✔️ Completed              | 24/11/25   | 29/11/25 |
 | Basic of Programming - Level 2  | ✔️ Completed              | 01/12/25   | 07/12/25 |
-| Arrays, Time & Space Complexity | ⏳ Pending                | 08/12/25   |          |
-| Complete C++ STL                | ⏳ Pending / ✔️ Completed |            |          |
+| Arrays, Time & Space Complexity | ✔️ Completed              | 08/12/25   | 21/12/25 |
+| Complete C++ STL                | ⏳ Pending                | 22/12/25   |          |
 | Searching & Sorting             | ⏳ Pending / ✔️ Completed |            |          |
 | Sorting Algorithms              | ⏳ Pending / ✔️ Completed |            |          |
 | Char Array & Strings            | ⏳ Pending / ✔️ Completed |            |          |
