@@ -153,7 +153,7 @@ Contributions & suggestions are welcome!
 
 ## 🎯 Goals
 
-* Solve **100+ problems** in 100 days
+* Solve **110+ problems** in 100 days
 * Cover all core DSA topics
 * Improve competitive programming rating
 
